@@ -1,0 +1,45 @@
+// Setings for the HighlightWords Sublime plugin - matches the Subliming Blueberry theme/color scheme.
+// Highlights:  o ,  1.  to  99. , ::inline highlight::, ''inline highlight'', <<inline highlight>>, **inline highlight**, ``multiline code``
+// #REGION:, #region, ??, !!, [*], [v], [x], e.g., FIXME, TODO, tl;dr. 
+// More available colors: darkrange, 0range, morange, Teal, LightBlue Lime, LightGreen. 
+
+{
+	"colors_by_scope":
+	[
+		"string",
+		"entity.name.class",
+		"variable.parameter",
+		"invalid.deprecated",
+		"invalid",
+		"support.function"
+	],
+	"permanent_highlight_keyword_color_mappings": [
+        {"keyword": "tl;dr", "color": "variable"},
+        {"keyword": "0range", "color": "variable.annotation"},
+        {"keyword": "morange", "color": "support.constant"},
+        {"keyword": "darkrange", "color": "foreground"},
+        {"keyword": "#REGION:", "color": "storage"},
+        {"keyword": "#region", "color": "storage"},
+        {"keyword": "??", "color": "support.function"},
+        {"keyword": "!!", "color": "support.function"},
+        {"keyword": "TODO", "color": "support.function"},
+        {"keyword": "FIXME", "color": "invalid"},
+        {"keyword": "[x]", "color": "invalid"},             // checkbox fail
+        {"keyword": "[*]", "color": "keyword"},             // keyword prefix, will show clearly in fuzzy search
+        {"keyword": "\\*\\*((?:(?!//|/\\*).)*?)\\*\\*", "color": "keyword", "flag": 0},// **inline highlight**
+        {"keyword": "<<((?:(?!//|/\\*).)*?)>>", "color": "variable.annotation", "flag": 0},// <<inline highlight>>
+        {"keyword": "[v]", "color": "keyword.operator"},	// checkbox check
+        {"keyword": "LightGreen", "color": "string"},
+        {"keyword": "Lime", "color": "entity.name.import"},
+        {"keyword": "''((?:(?!//|/\\*).)*?)''", "color": "entity.name.function", "flag": 0},// ''inline highlight''
+        {"keyword": "LightBlue", "color": "entity.name.class"},
+        {"keyword": "Teal", "color": "entity.other.inherited-class"},
+        {"keyword": " \\b[1-9][0-9]?\\. ", "color": "comment", "flag": 0},                  //  1.  numbered  99.  list
+        {"keyword": " o ", "color": "comment", "flag": 0},                                  //  o  bullet point
+        {"keyword": "\\:\\:((?:(?!//|/\\*).)*?)\\:\\:", "color": "comment", "flag": 0},     // ::inline highlight text::
+        {"keyword": "``([\\s\\S]*?)``", "color": "markup.raw", "flag": 0},                  // ``multiline code blocks``
+        {"keyword": "e.g.", "color": "variable.parameter"},
+    ],
+	"ignore_case": true
+}
+
